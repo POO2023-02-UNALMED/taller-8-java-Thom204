@@ -35,6 +35,6 @@ public class Jugador extends Futbolista{
 
     @Override
     public String toString() {
-        return super.toString()+" con dorsal "+this.dorsal+". Ha marcado "+this.golesMarcados+".";
+        return super.toString()+" con el dorsal "+this.dorsal+". Ha marcado "+this.golesMarcados+".";
     }
 }
