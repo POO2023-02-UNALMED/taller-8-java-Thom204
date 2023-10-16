@@ -2,7 +2,7 @@ package futbol;
 
 import static java.lang.Math.abs;
 
-public class Jugador extends Futbolista implements Comparable<Futbolista>{
+public class Jugador extends Futbolista{
     public short golesMarcados;
     public byte dorsal;
 
@@ -24,8 +24,9 @@ public class Jugador extends Futbolista implements Comparable<Futbolista>{
     public byte getDorsal() {return dorsal;}
 
     @Override
-    public int compareTo(Futbolista o) {
-        return abs(this.edad-o.getEdad());
+    public int compareTo(Object o) {
+        Object a=o;
+        return abs(this.edad-((Jugador)a).edad);
     }
     @Override
     public boolean jugarConLasManos() {

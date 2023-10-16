@@ -1,6 +1,6 @@
 package futbol;
 
-public abstract class Futbolista implements Comparable<Futbolista>{
+public abstract class Futbolista implements Comparable<Object>{
     String nombre;
     int edad;
     final String posicion;
@@ -28,10 +28,11 @@ public abstract class Futbolista implements Comparable<Futbolista>{
     }
 
     @Override
-    public int compareTo(Futbolista o) {
-        if (this==o){
+    public int compareTo(Object o) {
+        Object a= o;
+        if (this== ((Futbolista)a)){
             return 0;
-        }else {return 1;}
+        }else{return 1;}
     }
 
     public abstract boolean jugarConLasManos();
